@@ -517,7 +517,7 @@ void IipHelper::Run(void)
 		}
 		{
 			uint32_t _next_us = 1000000U;
-			__app_loop(this->mac_addr, this->ip4_addr_be, &_next_us, this->opaque);
+			__app_loop(this->workspace, this->mac_addr, this->ip4_addr_be, &_next_us, this->opaque);
 			next_us = _next_us < next_us ? _next_us : next_us;
 		}
 		if (cnt && this->ccstat) {
